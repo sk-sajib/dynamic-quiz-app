@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { Container, Row } from 'react-bootstrap';
 import { useLoaderData } from "react-router-dom";
 import Quesion from '../Quesion/Quesion';
+import QuestionResult from '../QuestionResult/QuestionResult';
 
 const QuizDetail = () => {
     const quizDetails = useLoaderData();
@@ -15,7 +16,8 @@ const QuizDetail = () => {
   return (
     <Container>
       
-       <h1 className="mt-4">Questions of {name}</h1>
+        <div className="quiz-info">
+        <h1 className="mt-4">Questions of {name}</h1>
           <Row xs={1} md={1} lg={1} className="g-4">
             {questions.map((question, index) => (
               <Quesion
@@ -29,6 +31,15 @@ const QuizDetail = () => {
               ></Quesion>
             ))}
           </Row>
+
+
+          <div style={{backgroundColor: "#ddd"}} className="question-result-container col-sm-3 mt-5 text-center">
+            <QuestionResult
+                rightAns={rightAns}
+                wrongAns={wrongAns}
+            ></QuestionResult>
+        </div>
+        </div>
       
     </Container>
   )
