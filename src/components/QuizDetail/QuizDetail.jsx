@@ -33,7 +33,7 @@ const QuizDetail = () => {
           </Row>
 
 
-          <div style={{backgroundColor: "#ddd"}} className="question-result-container col-sm-3 mt-5 text-center">
+          <div style={{backgroundColor: "#ddd"}} className="question-result-container col-sm-3 mt-5 ml-5 text-center">
             <QuestionResult
                 rightAns={rightAns}
                 wrongAns={wrongAns}
