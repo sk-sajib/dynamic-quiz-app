@@ -21,9 +21,6 @@ const Header = () => {
         <NavLink className={({ isActive, isPending }) => isActive ? "active" : isPending ? "pending" : ""} to='/'>
           Home
         </NavLink>
-        <NavLink className={({ isActive, isPending }) => isActive ? "active" : isPending ? "pending" : ""}  to='/statistics'>    
-          Statistics
-        </NavLink >
         <NavLink className={({ isActive, isPending }) => isActive ? "active" : isPending ? "pending" : ""}  to='/blog'>
           Blog
         </NavLink>
